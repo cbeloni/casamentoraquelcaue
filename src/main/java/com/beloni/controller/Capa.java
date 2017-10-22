@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Map;
 
 @Controller
-public class StartApp {
+public class Capa {
 
     @RequestMapping(value="/")
     public String start(Map<String, Object> model){
