@@ -1,0 +1,5 @@
+spring.datasource.url=jdbc:postgresql://localhost/casamento
+spring.datasource.username=caue
+spring.datasource.password=postgres
+spring.jpa.generate-ddl=true
+welcome.message: Bem vindo
