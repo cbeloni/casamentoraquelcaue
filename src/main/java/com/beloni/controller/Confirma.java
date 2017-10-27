@@ -8,6 +8,6 @@ public class Confirma {
 
     @RequestMapping("confirma")
     public String presenca(){
-        return "presenca";
+        return "convite";
     }
 }
