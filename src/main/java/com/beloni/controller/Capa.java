@@ -28,6 +28,7 @@ public class Capa {
             Date hoje_sem_horas = dateFormat.parse(dateFormat.format(date));
             System.out.println("date2.getTime(): " + date2);
             System.out.println("hoje_sem_horas.getTime(): "  + hoje_sem_horas);
+            System.out.println("Hoje com horas:" + date);
             long diff = date2.getTime() - hoje_sem_horas.getTime();
             dias_faltantes = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
             System.out.println ("Days: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS));
