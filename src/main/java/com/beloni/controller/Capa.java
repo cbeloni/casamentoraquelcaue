@@ -19,16 +19,18 @@ public class Capa {
 
     @RequestMapping(value="/")
     public String start(Map<String, Object> model, HttpSession session, HttpServletRequest request){
-        String data_casamento = "19 11 2017";
+        String data_casamento = "18 11 2017";
         DateFormat dateFormat = new SimpleDateFormat("dd MM yyyy");
         Long dias_faltantes = null;
         try{
             Date date2 = dateFormat.parse(data_casamento);
             Date date = new Date();
-            long diff = date2.getTime() - date.getTime();
+            Date hoje_sem_horas = dateFormat.parse(dateFormat.format(date));
+            System.out.println("date2.getTime(): " + date2.getTime());
+            System.out.println("hoje_sem_horas.getTime(): " + hoje_sem_horas.getTime());
+            long diff = date2.getTime() - hoje_sem_horas.getTime();
             dias_faltantes = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
             System.out.println ("Days: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS));
-            String teste = "Teste 2";
             System.out.println(dateFormat.format(date));
         }catch (ParseException e){
             e.printStackTrace();
